@@ -60,4 +60,28 @@ def voler():
     atterrir()
 
 voler()
-
+#========== systeme de controle  drone ==============
+while True:
+    print("1. Décoller")
+    print("2. voler")
+    print("3. Atterrir")
+    print("4. Afficher état")
+    print("5. Quitter")
+    input_utilisateur = input("choisissez une option:")
+    if input_utilisateur =="1":
+      decoller()
+    elif input_utilisateur =="2":
+      voler()
+    elif input_utilisateur =="3":
+      atterrir()
+    elif input_utilisateur =="4":
+     print(f"Nom: {nom}")
+     print(f"Vitesse: {vitesse}")
+     print(f"Altitude: {altitude}")
+     print(f"Batterie: {batterie}")
+     print(f"Position: {position}")
+     print(f"En vol: {en_vol}")
+    elif input_utilisateur =="5":
+     break 
+     print("Au revoir!")
+ 

@@ -37,3 +37,20 @@ def atterrir():
     else:
         print("Le drone est deja au sol")
 atterrir()
+
+def voler():
+    global en_vol
+    global batterie
+    decoller()
+    en_vol = True
+    print("Le drone commence à voler.")
+    while en_vol:
+        print("Le drone est en vol.")
+        print("altitude actuelle:", altitude)
+        print("position actuelle:", position)
+        print("batterie restante:", batterie)
+        batterie -=10
+        if batterie <= 0:
+            print("Batterie faible. Le drone doit atterrir.")
+            break
+voler()

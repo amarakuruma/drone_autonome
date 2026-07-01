@@ -1,0 +1,25 @@
+[2026-07-01 23:28:08.273421]
+[2026-07-01 23:44:19.629452]Nom: drone 001
+[2026-07-01 23:44:19.630436]Vitesse: 0
+[2026-07-01 23:44:19.630436]Altitude: 0
+[2026-07-01 23:44:19.630436]Batterie: 100
+[2026-07-01 23:44:19.630436]Position: {'x': 0, 'y': 0, 'z': 0}
+[2026-07-01 23:44:19.631437]En vol: False
+[2026-07-01 23:46:52.475032]Nom: drone 001
+[2026-07-01 23:46:52.475032]Vitesse: 0
+[2026-07-01 23:46:52.475032]Altitude: 0
+[2026-07-01 23:46:52.475032]Batterie: 100
+[2026-07-01 23:46:52.475996]Position: {'x': 0, 'y': 0, 'z': 0}
+[2026-07-01 23:46:52.475996]En vol: False
+[2026-07-01 23:46:52.475996]Le drone décolle. Altitude actuelle: 50
+[2026-07-01 23:46:52.475996]Le drone commence à voler.
+[2026-07-01 23:46:52.476994]Le drone se déplace vers la position: {'x': 10, 'y': 20, 'z': 30}
+[2026-07-01 23:46:52.476994]Le drone se déplace vers la position: {'x': 10, 'y': 20, 'z': 30}. Batterie restante: 90%
+[2026-07-01 23:46:52.476994]Le drone se déplace vers la position: {'x': 15, 'y': 25, 'z': 35}
+[2026-07-01 23:46:52.476994]Le drone se déplace vers la position: {'x': 15, 'y': 25, 'z': 35}. Batterie restante: 80%
+[2026-07-01 23:46:52.476994]Le drone se déplace vers la position: {'x': 20, 'y': 30, 'z': 40}
+[2026-07-01 23:46:52.476994]Le drone se déplace vers la position: {'x': 20, 'y': 30, 'z': 40}. Batterie restante: 70%
+[2026-07-01 23:46:52.478191]Le drone se déplace vers la position: {'x': 25, 'y': 35, 'z': 45}
+[2026-07-01 23:46:52.478191]Le drone se déplace vers la position: {'x': 25, 'y': 35, 'z': 45}. Batterie restante: 60%
+[2026-07-01 23:46:52.478191]Le drone atterrit. Altitude actuelle: 0
+[2026-07-01 23:46:52.478191]Le drone atterrit. Altitude actuelle: 0

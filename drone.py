@@ -1,3 +1,7 @@
+import datetime 
+def enregistrer_log(message):
+    with open("logs.txt", "a", encoding="utf-8") as fichier:
+        fichier.write(f"[{datetime.datetime.now()}]{message}\n")
 # gestion de drone 
 nom = "drone 001"
 vitesse = 0 
@@ -13,12 +17,12 @@ trajet =[
 ]
 
 print("initialisation du drone")
-print("nom :", nom)
-print("vitesse:", vitesse)
-print("altitude:", altitude)
-print("batterie:", batterie)
-print("position:", position)
-print("en-vol:", en_vol)
+enregistrer_log(f"Nom: {nom}")
+enregistrer_log(f"Vitesse: {vitesse}")
+enregistrer_log(f"Altitude: {altitude}")
+enregistrer_log(f"Batterie: {batterie}")
+enregistrer_log(f"Position: {position}")
+enregistrer_log(f"En vol: {en_vol}")
 
 def decoller():
     global en_vol
@@ -26,35 +30,32 @@ def decoller():
     if not en_vol:
         en_vol = True
         altitude = 50
-        print("Le drone décolle.")
-        print("altitude actuelle:", altitude)
+        enregistrer_log(f"Le drone décolle. Altitude actuelle: {altitude}")
     else:
-        print("Le drone est déjà en vol.")
+        enregistrer_log("Le drone est déjà en vol.")
 def atterrir():
     global en_vol
     global altitude
     if en_vol:
         en_vol = False
         altitude = 0 
-        print("Le drone atterrit.")
-        print(" altitude actuelle:", altitude)
+        enregistrer_log(f"Le drone atterrit. Altitude actuelle: {altitude}")
     else:
-        print("Le drone est deja au sol")
+        enregistrer_log("Le drone est deja au sol")
 def voler():
     global en_vol
     global batterie
     decoller()
     en_vol = True
-    print("Le drone commence à voler.")
+    enregistrer_log("Le drone commence à voler.")
     for point in trajet:
         position["x"] = point["x"]
         position["y"] = point["y"]
         position["z"] = point["z"]
-        print("Le drone se déplace vers la position:", position)
         batterie -= 10
-    
+        enregistrer_log(f"Le drone se déplace vers la position: {position}. Batterie restante: {batterie}%")    
         if batterie <= 0:
-            print("Batterie faible. Le drone doit atterrir.")
+            enregistrer_log("Batterie faible. Le drone doit atterrir.")
             break
     atterrir()
 

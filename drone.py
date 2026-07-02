@@ -2,6 +2,8 @@ import datetime
 def enregistrer_log(message):
     with open("logs.txt", "a", encoding="utf-8") as fichier:
         fichier.write(f"[{datetime.datetime.now()}]{message}\n")
+        
+        
 # gestion de drone 
 nom = "drone 001"
 vitesse = 0 
@@ -43,6 +45,7 @@ def atterrir():
     else:
         enregistrer_log("Le drone est deja au sol")
 def voler():
+
     global en_vol
     global batterie
     decoller()
@@ -58,10 +61,9 @@ def voler():
             enregistrer_log("Batterie faible. Le drone doit atterrir.")
             break
     atterrir()
-
-voler()
 #========== systeme de controle  drone ==============
-while True:
+if __name__ == "__main__":
+ while True:
     print("1. Décoller")
     print("2. voler")
     print("3. Atterrir")
@@ -82,6 +84,6 @@ while True:
      print(f"Position: {position}")
      print(f"En vol: {en_vol}")
     elif input_utilisateur =="5":
-     break 
      print("Au revoir!")
+     break
  
